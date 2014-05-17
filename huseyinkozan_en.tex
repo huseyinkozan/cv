@@ -1,0 +1,287 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+
+% personal data
+\name{Hüseyin}{Kozan}
+\title{Computer Engineer}                               % optional, remove / comment the line if not wanted
+\address{Cevizli M. Karacabey S. 5/10 Kartal}{Istanbul}{Turkey}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+90~(536)~339~4791}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{posta@huseyinkozan.com.tr}                               % optional, remove / comment the line if not wanted
+\homepage{huseyinkozan.com.tr/en}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[twitter]{huseyinkozan}                             % optional, remove / comment the line if not wanted
+\social[github]{huseyinkozan}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{I want to specialize in user interface design and implementation at my professional career which I started with. Also, I will support and contibure the open source movement which gives me alot of skills and experiences.}                                 % optional, remove / comment the line if not wanted
+
+% sayfa numarasi hatasi icin {
+\usepackage{lastpage}
+\rfoot{\textit{\small{\thepage/\pageref{LastPage}}}}
+% }
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+% başlık linki
+% \link[başlık \faExternalLink \hspace{4pt}]{http://...}
+% madde linki 
+% \link[madde \tiny \faExternalLink \hspace{4pt}]{http://...}
+
+\section{Experiences}
+
+\subsection{Vocational}
+
+\cventry{Jun. 2013 -- ...}{Software Engineer}{\link[CTech A.S \faExternalLink \hspace{4pt}]{http://en.ctech.com.tr}}{}{}{
+\begin{itemize}%
+  \item Modeo, 3G Video Streaming Device
+    \begin{itemize}
+      \item Server control GUI with \link[Qt/C++ \tiny \faExternalLink \hspace{4pt}]{http://qt-project.org/}
+      \item Embedded control GUI with Qt/C++.
+      \item Control protocol design and implementation with Google Protocol Buffer.
+      \item Video streaming web system with CodeIgniter/MySQL.
+      \item Maintenance of existing IPhone codes.
+    \end{itemize}
+  \item Modeo Encoder, Video Encoder Device
+    \begin{itemize}
+      \item Control GUI with Qt/C++.
+    \end{itemize}
+  \item Military Modem
+    \begin{itemize}
+      \item SNMP agent design and implementation using \link[Agent++ \tiny \faExternalLink \hspace{4pt}]{http://www.agentpp.com/}
+      \item SNMP Manager design and implementation using Qt/C++, Snmp++ and QtPropertyBrowser.
+    \end{itemize}
+  \item Deep Package Inspection
+    \begin{itemize}
+      \item Reporting interface with CodeIgniter/RRDTool.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Jan. -- Oct. 2009,\newline Dec. 2010 -- Jun. 2013}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
+\begin{itemize}
+  \item \link[microCOR Ekg Device User Interface \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/en/microcor-ekg-cihazi/bilgisayar-yazilimi/}
+    \begin{itemize}
+      \item User interface with Qt/C++.
+      \item Patient database with SQLite.
+      \item Hawrdware control with private binary protocol.
+      \item Firmware check and update.
+      \item Windows installer with NSIS. Mac OS X installer with Bundle system. Pardus install package with Pisi packaging system.
+    \end{itemize}
+  \item microCOR Ekg Device Android Application
+    \begin{itemize}
+      \item Fork of desktop application for Android.
+      \item Gathering data with libusb using Android Native.
+    \end{itemize}
+  \item \link[Infron Web Site \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}
+    \begin{itemize}
+      \item Wordpress installation and configuration.
+      \item Child theme for Wordpress.
+      \item An extension to check update for microCOR Ekg Device User Interface.
+    \end{itemize}
+  \item ISO 13485 Quality System
+    \begin{itemize}
+      \item Alfresco installation and configuration for quality system.
+      \item Automation scripts for manufacturing.
+    \end{itemize}
+  \item Health Device
+    \begin{itemize}
+      \item JSON based private protocol development.
+      \item Android REST service which using this protocol.
+      \item Surface mount circuit board soldering.
+    \end{itemize}
+\end{itemize}}
+
+\newpage
+
+\cventry{Jul. -- Aug. 2012}{Software Engineer}{\link[SanLab \faExternalLink \hspace{4pt}]{http://sanlab.net}}{}{}{
+\begin{itemize}
+  \item Forklift Simulator
+    \begin{itemize}
+      \item libmodbus C wrapper to use with MODBUS supported control modules.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Feb. -- Nov. 2010}{Military Software Officer}{Turkish Armed Forces}{}{}{
+\begin{itemize}
+  \item School Portal
+    \begin{itemize}
+      \item Development and maintenance of school portal which was written with PHP/MySQL.
+      \item Redesign and implement MySQL database.
+    \end{itemize}
+\end{itemize}}
+
+
+\subsection{Freelancer}
+
+\cventry{2012}{RFID Reader SDK}{\link[RFtek Ltd \faExternalLink \hspace{4pt}]{http://rftek.com.tr/?lang=en}}{}{}{
+\begin{itemize}
+  \item Development of RFID Reader SDK using Qt.
+  \item .NET wrapper using Active Qt.
+\end{itemize}}
+
+\cventry{2008}{Devren Control Panel}{\link[Devren Ltd. \faExternalLink \hspace{4pt}]{http://www.devren.com.tr}}{}{}{
+\begin{itemize}
+  \item Management interface with PHP.
+\end{itemize}}
+
+\cventry{2008}{\link[The Play Barn \faExternalLink \hspace{4pt}]{http://theplaybarn.com.tr/}}{}{}{}{
+\begin{itemize}
+  \item A kindergarten web site which have control panel with CodeIgniter/MySQL. (Replaced)
+\end{itemize}}
+
+\subsection{Open Source}
+
+\cventry{2013}{Qt Creator}{}{}{}{
+\begin{itemize}
+  \item A contribution to Qt Creator 2.7.0 that you can close opened files with middle click. \link[\tiny \faExternalLink \hspace{4pt}]{https://qt.gitorious.org/qt-creator/qt-creator/source/7724bd467388f6ae3b8a4cbc8609f535a94a03f1:dist/changes-2.7.0}
+\end{itemize}}
+
+\cventry{2013}{Qt}{}{}{}{
+\begin{itemize}
+\item Animated Layouts
+    \begin{itemize}
+      \item \link[QAnimatedGridLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedGridLayout} : A grid layout that can zoom into an item with animation.
+      \item \link[QAnimatedMainWindowLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedMainWindowLayout} : A main window layout that can change layout placement ratios with animation.
+      \item \link[Fixed Ratio Layout \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/sabit-oranli-layout} : improve a squared layout to obey \link[Golden Ratio \tiny \faExternalLink \hspace{4pt}]{http://en.wikipedia.org/wiki/Golden_ratio}.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{2012}{PhoneGap}{}{}{}{
+\begin{itemize}
+  \item An extension to PhoneGap which provide Bluetooth support on Android environment: \link[phonegap-bluetooth \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/phonegap-bluetooth}
+\end{itemize}}
+
+\cventry{2012}{Pardus}{}{}{}{
+\begin{itemize}
+  \item Pardus packaging IDE \link[PiSiDo \tiny \faExternalLink \hspace{4pt}]{http://sf.net/p/pisido}
+  \item \link[Packing of: \tiny \faExternalLink \hspace{4pt}]{https://github.com/pardus-anka/pardususer.de/}
+    \begin{itemize}
+      \item PiSiDo, Heimdall, libmodbus, ScanGearMP, Kotaci, Easycap, MP, Sysprof
+    \end{itemize}
+\end{itemize}}
+
+\cventry{2008}{Gentoo}{}{}{}{
+\begin{itemize}
+  \item Install, usage and optimization experiences.
+\end{itemize}}
+
+\cventry{}{Others}{}{}{}{
+\begin{itemize}
+  \item \link[QtCreator project files \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/opengl-super-bible-qt-project} for OpenGL Super Bible book examples.
+  \item \link[BrightTray \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/brighttray} : Brightness tool for Linux which runs at system tray.
+  \item A dictionary application with WinAPI.
+  \item \link[Testrix \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/Testrisks-src.zip} : A Tetris clone with OpenGL.
+  \item \link[Avagadro translation. \tiny \faExternalLink \hspace{4pt}]{https://www.google.com.tr/search?q=avagadro+huseyinkozan}
+\end{itemize}}
+
+\section{Interns}
+\cvitemwithcomment{2009}{Infron Ltd.}{Development of microCOR Ekg Device User Interface}
+\cvitemwithcomment{2008}{THY}{Computer hardware intern}
+\cvitemwithcomment{2003}{TOFAS}{Computer hardware intern}
+\cvitemwithcomment{2003}{Koc Sistem}{Computer hardware intern}
+
+\newpage
+
+\section{School Projects}
+\cvitemwithcomment{2009}{Medaq : Digital Signal Acquisition GUI with Qt/C++.}{\link[Final Project \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/bitirme-projesi}}
+\cvitemwithcomment{2009}{Sine recognition with Matlab.}{\link[Artificial Neural Network \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/sine_recognition.zip}}
+\cvitemwithcomment{2009}{\link[Hodgkin and Huxley Model GUI with Matlab \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/Hudgkin-Huxley.zip}}{}
+\cvitemwithcomment{2009}{String search analysis with dynamic programming}{\link[Algorithm Analysis \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/SubstrFinder-src.zip}}
+\cvitemwithcomment{2009}{Recursive mutiplication of big integers}{Algorithm Analysis}
+\cvitemwithcomment{2008}{A rental web site with PHP/MS-SQL}{Web Programming}
+\cvitemwithcomment{2008}{A RISC CPU design}{Computer Architecture}
+\cvitemwithcomment{2007}{Dynamic sized array}{\link[Programming Languages \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/MyArray.zip}}
+
+\section{Educations}
+\cvitemwithcomment{2004--2009}{Computer Engineering}{{\tiny \textit{2,8/4}},  \link[Istanbul University \tiny \faExternalLink \hspace{4pt}]{http://ce.istanbul.edu.tr/en}}
+\cvitemwithcomment{2001--2003}{Computer Hardware}{{\tiny \textit{3,4/4}},  \link[Uludağ Üniversitesi \tiny \faExternalLink \hspace{4pt}]{http://tby.uludag.edu.tr/}}
+\cvitemwithcomment{1996--2000}{Science}{{\tiny \textit{3.5/5}},  \link[Serik Anatolian High School \tiny \faExternalLink \hspace{4pt}]{http://serikanadolulisesi.meb.k12.tr/}}
+
+
+\section{Languages}
+\cvitemwithcomment{Turkish}{Native}{}
+\cvitemwithcomment{English}{Intermediate}{Hİgh School and University}
+
+\section{Certifications/Eğitim}
+\cventry{2002}{Windows 2000 MCSE}{}{}{MBA Bursa}{Microsoft Certified System Engineer (MCSE) training for Windows 2000 Server Family.}
+\cventry{2002}{Windows 2000 MCP}{}{}{MBA Bursa}{Microsoft Certified Professional (MCP) certificate for Windows 2000 Server Family.}
+
+
+\section{Technical Skills}
+\cvitem{Programming Languages}{C++, PHP, Bash, NSIS Script, Javascript, HTML, QML, Java, C, Object-C}
+\cvitem{Frameworks}{Qt, Qwt, CodeIgniter, JQuery, OpenGL}
+\cvitem{Development Tools}{QtCreator, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, Matlab}
+\cvitem{Network Protocols}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, MODBUS, RTMP, EPC Gen2}
+\cvitem{Database Systems}{MySQL, SQLite, RRDTool, MS-SQL}
+\cvitem{Versioning}{git, Bazaar, SVN, Alfresco}
+\cvitem{Operating Systems}{Linux (Ubuntu, Gentoo, Pardus, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 2000 Server), Mac (OS X)}
+
+\section{Personal Informatins}
+  \cvitem{}{Born at 1982. Married and have a child. Got a driver license. Non-smoker. Finished military duty.}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

@@ -1,0 +1,287 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+
+% personal data
+\name{Hüseyin}{Kozan}
+\title{Bilgisayar Mühendisi}                               % optional, remove / comment the line if not wanted
+\address{Cevizli M. Karacabey S. 5/10 Kartal}{İstanbul}{Türkiye}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+90~(536)~339~4791}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{posta@huseyinkozan.com.tr}                               % optional, remove / comment the line if not wanted
+\homepage{huseyinkozan.com.tr}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[twitter]{huseyinkozan}                             % optional, remove / comment the line if not wanted
+\social[github]{huseyinkozan}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{Kullanıcı arayüzü yaparak başladığım meslek hayatıma yine aynı alanda uzmanlaşarak devam ettirmek istiyorum. Ayrıca bana beceri ve tecrübe kazandıran açık kaynak hareketine destek ve katkı vermeye devam edeceğim.}                                 % optional, remove / comment the line if not wanted
+
+% sayfa numarasi hatasi icin {
+\usepackage{lastpage}
+\rfoot{\textit{\small{\thepage/\pageref{LastPage}}}}
+% }
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+% başlık linki
+% \link[başlık \faExternalLink \hspace{4pt}]{http://...}
+% madde linki 
+% \link[madde \tiny \faExternalLink \hspace{4pt}]{http://...}
+
+\section{Deneyimler}
+
+\subsection{Mesleki}
+
+\cventry{Haz. 2013 -- ...}{Yazılım Mühendisi}{\link[CTech A.Ş \faExternalLink \hspace{4pt}]{http://ctech.com.tr}}{}{}{
+\begin{itemize}%
+  \item Modeo, 3G Video Aktarım Cihazı
+    \begin{itemize}
+      \item Qt/C++ ile sunucu kontrolü arayüzü.
+      \item Modeo üzerinde çalışan gömülü sistem kullanıcı arayüzü.
+      \item Google Protocol Buffer ile kontrol protokolü tasarımı ve gerçeklemesi. 
+      \item CodeIgniter/MySQL tabanlı site üzerinden RTMP protokolü ile video akış izleme sistemi.
+      \item Mevcut IPhone kodlarının bakımı.
+    \end{itemize}
+  \item Modeo Encoder, Video Sıkıştırma Cihazı
+    \begin{itemize}
+      \item Qt/C++ ile sunucu kontrolü arayüzü.
+    \end{itemize}
+  \item Askeri Modem
+    \begin{itemize}
+      \item Agent++ kullanarak SNMP sunucu.
+      \item Qt/C++, Snmp++ ve QtPropertyBrowser kullanarak SNMP yönetim aracı.
+    \end{itemize}
+  \item Derin Paket İnceleme
+    \begin{itemize}
+      \item CodeIgniter/RRDTool kullanarak raporlama arayüzü.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Oca. -- Eki. 2009,\newline Ara. 2010 -- Haz. 2013}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
+\begin{itemize}
+  \item \link[microCOR Ekg Cihazı Bilgisayar Yazılımı \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/microcor-ekg-cihazi/bilgisayar-yazilimi/}
+    \begin{itemize}
+      \item Qt/C++ ile kullanıcı arayüzü.
+      \item Sqlite ile hasta veritabanı.
+      \item Ticari ikili protokol ile donanım kontrolü.
+      \item Firmware kontrolü ve güncelleme.
+      \item NSIS ile Windows kurulumu. Bundle sistemi ile Mac OS X kurulumu. Pisi paket sistemi ile Pardus kurulumu.
+    \end{itemize}
+  \item microCOR Ekg Cihazı Android Uygulaması
+    \begin{itemize}
+      \item Masaüstü programının Android için çatallanması.
+      \item Android Native kullanarak libusb ile Usb Hid cihazından veri alımı.
+    \end{itemize}
+  \item \link[Infron Web Sitesi \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr}
+    \begin{itemize}
+      \item Wordpress kurulumu ve yapılandırması.
+      \item Wordpress için alt tema.
+      \item microCOR Ekg programının surum kontrolü için Wordpress eklentisi.
+    \end{itemize}
+  \item ISO 13485 Kalite sistemi
+    \begin{itemize}
+      \item Alfresco kurulumu ve kalite sistemine göre yapılandırılması.
+      \item Üretim süreçlerini otomatize eden betikler oluşturulması.
+    \end{itemize}
+  \item Saglik Cihazı
+    \begin{itemize}
+      \item JSON temelli ticari protokol geliştirme. 
+      \item Bu protokolu kullanan Android REST servisi. 
+      \item Yüzey montaj devre lehimleme.
+    \end{itemize}
+\end{itemize}}
+
+\newpage
+
+\cventry{Tem. -- Ağu. 2012}{Yazılım Mühendisi}{\link[SanLab \faExternalLink \hspace{4pt}]{http://sanlab.net/tr}}{}{}{
+\begin{itemize}
+  \item Forklift Simülatörü
+    \begin{itemize}
+      \item MODBUS destekli kontrol modüllerinin kullanılması için libmodbus C sarmalayıcısı.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Şub. -- Kas. 2010}{Yazılım Subayı}{Türk Silahlı Kuvvetleri}{}{}{
+\begin{itemize}
+  \item Okul Portalı
+    \begin{itemize}
+      \item PHP/MySQL ile yazılmış portalın idamesi ve geliştirilmesi.
+      \item MySQL veritabanının yeniden tasarlanması ve gerçeklenmesi.
+    \end{itemize}
+\end{itemize}}
+
+
+\subsection{Serbest Çalışma (Freelancer)}
+
+\cventry{2012}{RFID Okuyucu SDK'sı}{\link[RFtek Ltd \faExternalLink \hspace{4pt}]{http://rftek.com.tr/}}{}{}{
+\begin{itemize}
+  \item Qt ile RFID Okuyucusu Yazılım Geliştirme Kiti (SDK).
+  \item Active Qt ile .NET sarmalayici.
+\end{itemize}}
+
+\cventry{2008}{Devren Kontrol Paneli}{\link[Devren Ltd. \faExternalLink \hspace{4pt}]{http://www.devren.com.tr}}{}{}{
+\begin{itemize}
+  \item PHP ile kontrol paneli.
+\end{itemize}}
+
+\cventry{2008}{\link[The Play Barn \faExternalLink \hspace{4pt}]{http://theplaybarn.com.tr/}}{}{}{}{
+\begin{itemize}
+  \item CodeIgniter/PHP ile yapılmış kontrol paneli ile yönetilebilen çocuk yuvası sitesi. (Değiştirilmiştir)
+\end{itemize}}
+
+\subsection{Açık Kaynak}
+
+\cventry{2013}{Qt Creator}{}{}{}{
+\begin{itemize}
+  \item Qt Creator 2.7.0'da eklediğim açık dosyaların orta fare tuşu ile kapatılması katkısı. \link[\tiny \faExternalLink \hspace{4pt}]{https://qt.gitorious.org/qt-creator/qt-creator/source/7724bd467388f6ae3b8a4cbc8609f535a94a03f1:dist/changes-2.7.0}
+\end{itemize}}
+
+\cventry{2013}{Qt}{}{}{}{
+\begin{itemize}
+\item Animasyonlu yerleşim nesneleri
+    \begin{itemize}
+      \item \link[QAnimatedGridLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedGridLayout} : Animasyon ile elemanını büyütebilen ızgara yerleşimi.
+      \item \link[QAnimatedMainWindowLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedMainWindowLayout} : Animasyon ile yerleşim oranları değişebilen ana pencere yerleşimi.
+      \item \link[Sabit oranlı yerleşim nesnesi \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/sabit-oranli-layout} : kare şeklindeki yerleşim yapısının \link[Altın Oran\tiny \faExternalLink \hspace{4pt}]{http://tr.wikipedia.org/wiki/Altin_oran}'a uyarlanması.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{2012}{PhoneGap}{}{}{}{
+\begin{itemize}
+  \item PhoneGap'ın Android ortamı için Bluetooth eklentisi: \link[phonegap-bluetooth \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/phonegap-bluetooth}
+\end{itemize}}
+
+\cventry{2012}{Pardus}{}{}{}{
+\begin{itemize}
+  \item Pardus paketleme IDE'si \link[PiSiDo \tiny \faExternalLink \hspace{4pt}]{http://sf.net/p/pisido}
+  \item \link[Paketlemeler: \tiny \faExternalLink \hspace{4pt}]{https://github.com/pardus-anka/pardususer.de/}
+    \begin{itemize}
+      \item PiSiDo, Heimdall, libmodbus, ScanGearMP, Kotaci, Easycap, MP, Sysprof
+    \end{itemize}
+\end{itemize}}
+
+\cventry{2008}{Gentoo}{}{}{}{
+\begin{itemize}
+  \item Kurulum, kullanım ve optimizasyon tecrübesi.
+\end{itemize}}
+
+\cventry{}{Diğer}{}{}{}{
+\begin{itemize}
+  \item OpenGL Super Bible Kitabinin örnekleri için \link[QtCreator proje dosyalari. \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/opengl-super-bible-qt-project}
+  \item \link[BrightTray \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/brighttray} : Linux'un sistem çekmecesinde çalışan ekran parlaklığı aracı.
+  \item WinAPI ile sözlük uygulaması.
+  \item \link[Testrix \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/Testrisks-src.zip} : OpenGL ile tetris klonu.
+  \item \link[Avogadro çevirisi. \tiny \faExternalLink \hspace{4pt}]{https://www.google.com.tr/search?q=avagadro+huseyinkozan}
+\end{itemize}}
+
+\section{Stajlar}
+\cvitemwithcomment{2009}{Infron Ltd.}{microCOR Ekg Bilgisayar Yazılımı geliştirmesi}
+\cvitemwithcomment{2008}{THY}{Bilgisayar Donanım stajı}
+\cvitemwithcomment{2003}{TOFAŞ}{Bilgisayar Donanım stajı}
+\cvitemwithcomment{2003}{Koç Sistem}{Bilgisayar Donanım stajı}
+
+\newpage
+
+\section{Okul Projeleri}
+\cvitemwithcomment{2009}{Medaq : Qt/C++ ile sinyal kaydı ve sayısal işlem arayüzü.}{\link[Bitirme Projesi \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/bitirme-projesi}}
+\cvitemwithcomment{2009}{Matlab'da sinus sinyali tanima.}{\link[Yapay Sinir Ağları \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/sine_recognition.zip}}
+\cvitemwithcomment{2009}{Matlab ile \link[Hodgkin and Huxley Modeli grafik kullanıcı arayüzü \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/Hudgkin-Huxley.zip}}{}
+\cvitemwithcomment{2009}{Dinamik progrmalama ile karakter arama analizi}{\link[Algoritma Analizi \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/SubstrFinder-src.zip}}
+\cvitemwithcomment{2009}{Özyineleme ile büyük tamsayıların çarpımı}{Algoritma Analizi}
+\cvitemwithcomment{2008}{PHP/MS-SQL ile ilan web sitesi}{Web Programlama}
+\cvitemwithcomment{2008}{RISC işlemci tasarımı}{Bilgisayar Mimarisi}
+\cvitemwithcomment{2007}{C++'ta dinamik boyutlu dizi}{\link[Programlama Dilleri \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/MyArray.zip}}
+
+\section{Eğitimler}
+\cvitemwithcomment{2004--2009}{Bilgisayar Mühendisliği}{{\tiny \textit{2,8/4}},  \link[İstanbul Üniversitesi \tiny \faExternalLink \hspace{4pt}]{http://ce.istanbul.edu.tr/}}
+\cvitemwithcomment{2001--2003}{Bilgisayar Donanımı}{{\tiny \textit{3,4/4}},  \link[Uludağ Üniversitesi \tiny \faExternalLink \hspace{4pt}]{http://tby.uludag.edu.tr/}}
+\cvitemwithcomment{1996--2000}{Fen Bilimleri}{{\tiny \textit{3.5/5}},  \link[Serik Anadolu Lisesi \tiny \faExternalLink \hspace{4pt}]{http://serikanadolulisesi.meb.k12.tr/}}
+
+
+\section{Lisanlar}
+\cvitemwithcomment{Türkçe}{Anadil}{}
+\cvitemwithcomment{İngilizce}{Orta}{Lise ve Üniversite Eğitimi}
+
+\section{Sertifika/Eğitim}
+\cventry{2002}{Windows 2000 MCSE}{}{}{MBA Bursa}{Windows 2000 Sunucu ailesi için Microsoft Certified System Engineer (MCSE) eğitimi.}
+\cventry{2002}{Windows 2000 MCP}{}{}{MBA Bursa}{Windows 2000 Sunucu ailesi için Microsoft Certified Professional (MCP) sertifikası.}
+
+
+\section{Teknik Beceriler}
+\cvitem{Programlama Dilleri}{C++, PHP, Bash, NSIS Script, Javascript, HTML, QML, Java, C, Object-C}
+\cvitem{Uygulama Çatıları}{Qt, Qwt, CodeIgniter, JQuery OpenGL}
+\cvitem{Geliştirme Araçları}{QtCreator, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, Matlab}
+\cvitem{Ağ Protokolleri}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, MODBUS, RTMP, EPC Gen2}
+\cvitem{Veritabanı Sistemleri}{MySQL, SQLite, RRDTool, MS-SQL}
+\cvitem{Sürüm Kontrol}{git, Bazaar, SVN, Alfresco}
+\cvitem{İşletim Sistemleri}{Linux (Ubuntu, Gentoo, Pardus, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 2000 Server), Mac (OS X)}
+
+\section{Kişisel Bilgiler}
+  \cvitem{}{1982 doğumlu. Evli ve bir çocuk babası. Sürücü belgesine sahip. Sigara kullanmıyor. Askerlik görevini yerine getirmiştir.}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
