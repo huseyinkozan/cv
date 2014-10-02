@@ -29,7 +29,7 @@
 % personal data
 \name{Hüseyin}{Kozan}
 \title{Computer Engineer}                               % optional, remove / comment the line if not wanted
-\address{Cevizli M. Karacabey S. 5/10 Kartal}{Istanbul}{Turkey}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{Antalya}{Turkey}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+90~(536)~339~4791}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
@@ -40,7 +40,7 @@
 \social[github]{huseyinkozan}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{I want to specialize in user interface design and implementation at my professional career which I started with. Also, I will support and contibure the open source movement which gives me alot of skills and experiences.}                                 % optional, remove / comment the line if not wanted
+%\quote{I want to specialize in user interface design and implementation at my professional career which I started with. Also, I will support and contibure the open source movement which gives me alot of skills and experiences.}                                 % optional, remove / comment the line if not wanted
 
 % sayfa numarasi hatasi icin {
 \usepackage{lastpage}
@@ -74,7 +74,24 @@
 
 \subsection{Vocational}
 
-\cventry{Jun. 2013 -- ...}{Software Engineer}{\link[CTech A.S \faExternalLink \hspace{4pt}]{http://en.ctech.com.tr}}{}{}{
+\cventry{Jun. 2014 -- ...}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
+\begin{itemize}
+  \item microCOR Ekg Device Control Application
+    \begin{itemize}
+      \item Development of the user interface to work on all platforms.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Haz. 2014 -- ...}{Software Engineer}{\link[AntSis Electronics \faExternalLink \hspace{4pt}]{http://antsiselektronik.com.tr/}}{}{}{
+\begin{itemize}
+  \item Geographic Information System(GIS)
+    \begin{itemize}
+      \item Development of a GIS system using PostGIS, GeoServer, OpenLayers, JQuery, and CodeIgniter/PostgreSQL.
+    \end{itemize}
+\end{itemize}}
+
+
+\cventry{Jun. 2013 -- Jun. 2014}{Software Engineer}{\link[CTech A.S \faExternalLink \hspace{4pt}]{http://en.ctech.com.tr}}{}{}{
 \begin{itemize}%
   \item Modeo, 3G Video Streaming Device
     \begin{itemize}
@@ -83,6 +100,7 @@
       \item Control protocol design and implementation with Google Protocol Buffer.
       \item Video streaming web system with CodeIgniter/MySQL.
       \item Maintenance of existing IPhone codes.
+      \item Jenkins CI integration with Bash scripts.
     \end{itemize}
   \item Modeo Encoder, Video Encoder Device
     \begin{itemize}
@@ -99,7 +117,7 @@
     \end{itemize}
 \end{itemize}}
 
-\cventry{Jan. -- Oct. 2009,\newline Dec. 2010 -- Jun. 2013}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
+\cventry{Dec. 2010 -- Jun. 2013}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
 \begin{itemize}
   \item \link[microCOR Ekg Device User Interface \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/en/microcor-ekg-cihazi/bilgisayar-yazilimi/}
     \begin{itemize}
@@ -152,8 +170,16 @@
     \end{itemize}
 \end{itemize}}
 
+\cventry{Jan. 2009 -- Oct. 2009}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
+\begin{itemize}
+  \item \link[microCOR Ekg Device User Interface \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/en/microcor-ekg-cihazi/bilgisayar-yazilimi/}
+    \begin{itemize}
+      \item User interface with Qt/C++.
+    \end{itemize}
+\end{itemize}}
 
-\subsection{Freelancer}
+
+\subsection{Project Based}
 
 \cventry{2012}{RFID Reader SDK}{\link[RFtek Ltd \faExternalLink \hspace{4pt}]{http://rftek.com.tr/?lang=en}}{}{}{
 \begin{itemize}
@@ -180,6 +206,10 @@
 
 \cventry{2013}{Qt}{}{}{}{
 \begin{itemize}
+\item Suleyman Demirel University \link[Qt Presentation \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/qt-sunumu}
+    \begin{itemize}
+      \item \link[QML presentation application \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/qt-presentation}
+    \end{itemize}
 \item Animated Layouts
     \begin{itemize}
       \item \link[QAnimatedGridLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedGridLayout} : A grid layout that can zoom into an item with animation.
@@ -251,10 +281,10 @@
 
 \section{Technical Skills}
 \cvitem{Programming Languages}{C++, PHP, Bash, NSIS Script, Javascript, HTML, QML, Java, C, Object-C}
-\cvitem{Frameworks}{Qt, Qwt, CodeIgniter, JQuery, OpenGL}
+\cvitem{Frameworks}{Qt, Qwt, CodeIgniter, JQuery, OpenLayers, GeoServer}
 \cvitem{Development Tools}{QtCreator, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, Matlab}
-\cvitem{Network Protocols}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, MODBUS, RTMP, EPC Gen2}
-\cvitem{Database Systems}{MySQL, SQLite, RRDTool, MS-SQL}
+\cvitem{Network Protocols}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, XML, MODBUS, RTMP, EPC Gen2}
+\cvitem{Database Systems}{MySQL, PostgreSQL, PostGIS, SQLite, RRDTool, MS-SQL}
 \cvitem{Versioning}{git, Bazaar, SVN, Alfresco}
 \cvitem{Operating Systems}{Linux (Ubuntu, Gentoo, Pardus, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 2000 Server), Mac (OS X)}
 

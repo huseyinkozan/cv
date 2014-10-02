@@ -29,7 +29,7 @@
 % personal data
 \name{Hüseyin}{Kozan}
 \title{Bilgisayar Mühendisi}                               % optional, remove / comment the line if not wanted
-\address{Cevizli M. Karacabey S. 5/10 Kartal}{İstanbul}{Türkiye}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{Antalya}{Türkiye}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+90~(536)~339~4791}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
@@ -40,7 +40,7 @@
 \social[github]{huseyinkozan}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Kullanıcı arayüzü yaparak başladığım meslek hayatıma yine aynı alanda uzmanlaşarak devam ettirmek istiyorum. Ayrıca bana beceri ve tecrübe kazandıran açık kaynak hareketine destek ve katkı vermeye devam edeceğim.}                                 % optional, remove / comment the line if not wanted
+%\quote{Kullanıcı arayüzü yaparak başladığım meslek hayatıma yine aynı alanda uzmanlaşarak devam ettirmek istiyorum. Ayrıca bana beceri ve tecrübe kazandıran açık kaynak hareketine destek ve katkı vermeye devam edeceğim.}                                 % optional, remove / comment the line if not wanted
 
 % sayfa numarasi hatasi icin {
 \usepackage{lastpage}
@@ -74,7 +74,24 @@
 
 \subsection{Mesleki}
 
-\cventry{Haz. 2013 -- ...}{Yazılım Mühendisi}{\link[CTech A.Ş \faExternalLink \hspace{4pt}]{http://ctech.com.tr}}{}{}{
+\cventry{Haz. 2014 -- ...}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
+\begin{itemize}
+  \item microCOR Ekg Cihazı Kontrol Yazılımı
+    \begin{itemize}
+      \item Bilgisayar yazılımının Android'e ve diğer tüm platformlar için yeniden geliştirilmesi.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Haz. 2014 -- ...}{Yazılım Mühendisi}{\link[AntSis Elektronik \faExternalLink \hspace{4pt}]{http://antsiselektronik.com.tr/}}{}{}{
+\begin{itemize}
+  \item Coğrafi Bilgi Sistemi (GIS)
+    \begin{itemize}
+      \item PostGIS, GeoServer, OpenLayers, JQuery, CodeIgniter/PostgreSQL kullanarak GIS sistemi oluşturulması.
+    \end{itemize}
+\end{itemize}}
+
+
+\cventry{Haz. 2013 -- Haz. 2014}{Yazılım Mühendisi}{\link[CTech A.Ş \faExternalLink \hspace{4pt}]{http://ctech.com.tr}}{}{}{
 \begin{itemize}%
   \item Modeo, 3G Video Aktarım Cihazı
     \begin{itemize}
@@ -83,6 +100,7 @@
       \item Google Protocol Buffer ile kontrol protokolü tasarımı ve gerçeklemesi. 
       \item CodeIgniter/MySQL tabanlı site üzerinden RTMP protokolü ile video akış izleme sistemi.
       \item Mevcut IPhone kodlarının bakımı.
+      \item Bash betikleri ile Jenkins CI entegrasyonu.
     \end{itemize}
   \item Modeo Encoder, Video Sıkıştırma Cihazı
     \begin{itemize}
@@ -93,17 +111,17 @@
       \item Agent++ kullanarak SNMP sunucu.
       \item Qt/C++, Snmp++ ve QtPropertyBrowser kullanarak SNMP yönetim aracı.
     \end{itemize}
-  \item Derin Paket İnceleme
+  \item Derin Paket İnceleme (DPI)
     \begin{itemize}
       \item CodeIgniter/RRDTool kullanarak raporlama arayüzü.
     \end{itemize}
 \end{itemize}}
 
-\cventry{Oca. -- Eki. 2009,\newline Ara. 2010 -- Haz. 2013}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
+\cventry{Ara. 2010 -- Haz. 2013}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
 \begin{itemize}
   \item \link[microCOR Ekg Cihazı Bilgisayar Yazılımı \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/microcor-ekg-cihazi/bilgisayar-yazilimi/}
     \begin{itemize}
-      \item Qt/C++ ile kullanıcı arayüzü.
+      \item Qt4/C++ ile kullanıcı arayüzü.
       \item Sqlite ile hasta veritabanı.
       \item Ticari ikili protokol ile donanım kontrolü.
       \item Firmware kontrolü ve güncelleme.
@@ -152,8 +170,16 @@
     \end{itemize}
 \end{itemize}}
 
+\cventry{Oca. 2009 -- Eki. 2009}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
+\begin{itemize}
+  \item \link[microCOR Ekg Cihazı Bilgisayar Yazılımı \tiny \faExternalLink \hspace{4pt}]{http://infron.com.tr/microcor-ekg-cihazi/bilgisayar-yazilimi/}
+    \begin{itemize}
+      \item Qt4/C++ ile kullanıcı arayüzü.
+    \end{itemize}
+\end{itemize}}
 
-\subsection{Serbest Çalışma (Freelancer)}
+
+\subsection{Proje Bazlı}
 
 \cventry{2012}{RFID Okuyucu SDK'sı}{\link[RFtek Ltd \faExternalLink \hspace{4pt}]{http://rftek.com.tr/}}{}{}{
 \begin{itemize}
@@ -180,6 +206,10 @@
 
 \cventry{2013}{Qt}{}{}{}{
 \begin{itemize}
+\item Süleyman Demirel Üniversitesi \link[Qt Sunumu \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/qt-sunumu}
+    \begin{itemize}
+      \item \link[QML sunum programı \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/qt-presentation}
+    \end{itemize}
 \item Animasyonlu yerleşim nesneleri
     \begin{itemize}
       \item \link[QAnimatedGridLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedGridLayout} : Animasyon ile elemanını büyütebilen ızgara yerleşimi.
@@ -251,10 +281,10 @@
 
 \section{Teknik Beceriler}
 \cvitem{Programlama Dilleri}{C++, PHP, Bash, NSIS Script, Javascript, HTML, QML, Java, C, Object-C}
-\cvitem{Uygulama Çatıları}{Qt, Qwt, CodeIgniter, JQuery OpenGL}
+\cvitem{Uygulama Çatıları}{Qt, Qwt, CodeIgniter, JQuery, OpenLayers, GeoServer}
 \cvitem{Geliştirme Araçları}{QtCreator, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, Matlab}
-\cvitem{Ağ Protokolleri}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, MODBUS, RTMP, EPC Gen2}
-\cvitem{Veritabanı Sistemleri}{MySQL, SQLite, RRDTool, MS-SQL}
+\cvitem{Ağ Protokolleri}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, XML, MODBUS, RTMP, EPC Gen2}
+\cvitem{Veritabanı Sistemleri}{MySQL, PostgreSQL, PostGIS, SQLite, RRDTool, MS-SQL}
 \cvitem{Sürüm Kontrol}{git, Bazaar, SVN, Alfresco}
 \cvitem{İşletim Sistemleri}{Linux (Ubuntu, Gentoo, Pardus, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 2000 Server), Mac (OS X)}
 
