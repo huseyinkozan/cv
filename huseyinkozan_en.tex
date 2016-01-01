@@ -6,13 +6,22 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass{moderncv}                          % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% huseyin : fontspec kullanmadan once boyleydi
+% \documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+% huseyin : http://tex.stackexchange.com/questions/31534/change-font-used-by-moderncv
+\usepackage{fontspec}
+\setmainfont{Ubuntu}
+\renewcommand{\sfdefault}{\rmdefault}
 
 
 % character encoding
@@ -28,19 +37,19 @@
 
 % personal data
 \name{Hüseyin}{Kozan}
-\title{Computer Engineer}                               % optional, remove / comment the line if not wanted
-\address{Antalya}{Turkey}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+90~(536)~339~4791}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\title{Computer Engineer and Hardware Technician}   % optional, remove / comment the line if not wanted
+\address{Kirsehir}{Turkey}{}                        % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+90~(536)~339~4791}                  % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{posta@huseyinkozan.com.tr}                               % optional, remove / comment the line if not wanted
-\homepage{huseyinkozan.com.tr/en}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[twitter]{huseyinkozan}                             % optional, remove / comment the line if not wanted
-\social[github]{huseyinkozan}                              % optional, remove / comment the line if not wanted
+\email{posta@huseyinkozan.com.tr}                   % optional, remove / comment the line if not wanted
+\homepage{huseyinkozan.com.tr/en}                   % optional, remove / comment the line if not wanted
+\social[linkedin]{huseyinkozan}                     % optional, remove / comment the line if not wanted
+\social[twitter]{huseyinkozan}                      % optional, remove / comment the line if not wanted
+\social[github]{huseyinkozan}                       % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{I want to specialize in user interface design and implementation at my professional career which I started with. Also, I will support and contibure the open source movement which gives me alot of skills and experiences.}                                 % optional, remove / comment the line if not wanted
+%\quote{Example quote}                              % optional, remove / comment the line if not wanted
 
 % sayfa numarasi hatasi icin {
 \usepackage{lastpage}
@@ -70,26 +79,49 @@
 % madde linki 
 % \link[madde \tiny \faExternalLink \hspace{4pt}]{http://...}
 
-\section{Experiences}
 
-\subsection{Vocational}
 
-\cventry{Jun. 2014 -- ...}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
+\section{Vocational Experiences}
+
+\cventry{Haz. 2015 -- ...}{Consultant}{\link[Video Analitik \faExternalLink \hspace{4pt}]{http://www.videoanalitik.com/}}{}{}{
 \begin{itemize}
-  \item microCOR Ekg Device Control Application
+  \item Video Analyse Software
     \begin{itemize}
-      \item Development of the user interface to work on all platforms.
-    \end{itemize}
-    \begin{itemize}
-      \item DCMTK Android fork.
+      \item Consultancy and development about PHP, Laravel, October CMS, MySQL, HTML, Javascript and web technologies. Consultancy about Linux Operating System and data flow architectural design.
     \end{itemize}
 \end{itemize}}
 
 \cventry{Haz. 2014 -- ...}{Software Engineer}{\link[AntSis Electronics \faExternalLink \hspace{4pt}]{http://antsiselektronik.com.tr/}}{}{}{
 \begin{itemize}
+  \item Internet of Things (IoT)
+    \begin{itemize}
+      \item Development of IoT management software using the technologies like NodeJS, PHP, HTML, Javascript, and MQTT.
+    \end{itemize}
   \item Geographic Information System(GIS)
     \begin{itemize}
-      \item Development of a GIS system using PostGIS, GeoServer, OpenLayers, JQuery, and CodeIgniter/PostgreSQL.
+      \item Development of a GIS using PostGIS, GeoServer, OpenLayers, JQuery, and CodeIgniter/PostgreSQL.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Jun. 2014 -- ...}{Software Engineer}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/en}}{}{}{
+\begin{itemize}
+  \item microCOR Lab SDK
+    \begin{itemize}
+      \item Design and development of the Lab Software Development Kit (SDK). Development of the MATLAB mex module to acquire data.
+    \end{itemize}
+  \item microCOR Ekg Software
+    \begin{itemize}
+      \item Hospital automation integration using DICOM protocol and DCMTK toolkit.
+    \end{itemize}
+    \begin{itemize}
+      \item Porting from Qt4 to Qt5 and development.
+    \end{itemize}
+    \begin{itemize}
+      \item Development of the user interface to work on Android and other mobile platforms.
+    \end{itemize}
+  \item Documentation System
+    \begin{itemize}
+      \item Configuration and adaptation of Alfresco, Libreoffice, Redmine, and GitLab tools for the ISO 13485 standardization.
     \end{itemize}
 \end{itemize}}
 
@@ -154,8 +186,6 @@
     \end{itemize}
 \end{itemize}}
 
-\newpage
-
 \cventry{Jul. -- Aug. 2012}{Software Engineer}{\link[SanLab \faExternalLink \hspace{4pt}]{http://sanlab.net}}{}{}{
 \begin{itemize}
   \item Forklift Simulator
@@ -182,7 +212,11 @@
 \end{itemize}}
 
 
-\subsection{Project Based}
+
+\newpage
+
+
+\section{Project Based Experiences}
 
 \cventry{2012}{RFID Reader SDK}{\link[RFtek Ltd \faExternalLink \hspace{4pt}]{http://rftek.com.tr/?lang=en}}{}{}{
 \begin{itemize}
@@ -200,25 +234,34 @@
   \item A kindergarten web site which have control panel with CodeIgniter/MySQL. (Replaced)
 \end{itemize}}
 
-\subsection{Open Source}
 
-\cventry{2013}{Qt Creator}{}{}{}{
-\begin{itemize}
-  \item A contribution to Qt Creator 2.7.0 that you can close opened files with middle click. \link[\tiny \faExternalLink \hspace{4pt}]{https://qt.gitorious.org/qt-creator/qt-creator/source/7724bd467388f6ae3b8a4cbc8609f535a94a03f1:dist/changes-2.7.0}
-\end{itemize}}
 
-\cventry{2013}{Qt}{}{}{}{
+\section{Open Source Contributions}
+
+\cventry{2014}{Qt}{}{}{}{
 \begin{itemize}
+\item Finite State Machine
+	\begin{itemize}
+      \item \link[Qt-Simple-State \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/Qt-Simple-State} : A simple state machine.
+	\end{itemize}
 \item Suleyman Demirel University \link[Qt Presentation \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/qt-sunumu}
     \begin{itemize}
       \item \link[QML presentation application \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/qt-presentation}
     \end{itemize}
+\end{itemize}}
+
+\cventry{2013}{Qt}{}{}{}{
+\begin{itemize}
 \item Animated Layouts
     \begin{itemize}
       \item \link[QAnimatedGridLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedGridLayout} : A grid layout that can zoom into an item with animation.
       \item \link[QAnimatedMainWindowLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedMainWindowLayout} : A main window layout that can change layout placement ratios with animation.
       \item \link[Fixed Ratio Layout \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/sabit-oranli-layout} : improve a squared layout to obey \link[Golden Ratio \tiny \faExternalLink \hspace{4pt}]{http://en.wikipedia.org/wiki/Golden_ratio}.
     \end{itemize}
+\item Qt Creator Feature
+	\begin{itemize}
+	  \item A contribution to Qt Creator 2.7.0 that you can close opened files with middle click. \link[\tiny \faExternalLink \hspace{4pt}]{https://qt.gitorious.org/qt-creator/qt-creator/source/7724bd467388f6ae3b8a4cbc8609f535a94a03f1:dist/changes-2.7.0}
+	\end{itemize}
 \end{itemize}}
 
 \cventry{2012}{PhoneGap}{}{}{}{
@@ -226,9 +269,9 @@
   \item An extension to PhoneGap which provide Bluetooth support on Android environment: \link[phonegap-bluetooth \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/phonegap-bluetooth}
 \end{itemize}}
 
-\cventry{2012}{Pardus}{}{}{}{
+\cventry{2012}{Pisi Linux (Pardus)}{}{}{}{
 \begin{itemize}
-  \item Pardus packaging IDE \link[PiSiDo \tiny \faExternalLink \hspace{4pt}]{http://sf.net/p/pisido}
+  \item Pisi Linux (formerly Pardus) packaging tool \link[PiSiDo \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/PiSiDo}
   \item \link[Packing of: \tiny \faExternalLink \hspace{4pt}]{https://github.com/pardus-anka/pardususer.de/}
     \begin{itemize}
       \item PiSiDo, Heimdall, libmodbus, ScanGearMP, Kotaci, Easycap, MP, Sysprof
@@ -249,15 +292,19 @@
   \item \link[Avagadro translation. \tiny \faExternalLink \hspace{4pt}]{https://www.google.com.tr/search?q=avagadro+huseyinkozan}
 \end{itemize}}
 
+
+
 \section{Interns}
+
 \cvitemwithcomment{2009}{Infron Ltd.}{Development of microCOR Ekg Device User Interface}
 \cvitemwithcomment{2008}{THY}{Computer hardware intern}
 \cvitemwithcomment{2003}{TOFAS}{Computer hardware intern}
 \cvitemwithcomment{2003}{Koc Sistem}{Computer hardware intern}
 
-\newpage
+
 
 \section{School Projects}
+
 \cvitemwithcomment{2009}{Medaq : Digital Signal Acquisition GUI with Qt/C++.}{\link[Final Project \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/en/bitirme-projesi}}
 \cvitemwithcomment{2009}{Sine recognition with Matlab.}{\link[Artificial Neural Network \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/sine_recognition.zip}}
 \cvitemwithcomment{2009}{\link[Hodgkin and Huxley Model GUI with Matlab \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/Hudgkin-Huxley.zip}}{}
@@ -267,32 +314,53 @@
 \cvitemwithcomment{2008}{A RISC CPU design}{Computer Architecture}
 \cvitemwithcomment{2007}{Dynamic sized array}{\link[Programming Languages \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/MyArray.zip}}
 
+
+
 \section{Educations}
+
 \cvitemwithcomment{2004--2009}{Computer Engineering}{{\tiny \textit{2,8/4}},  \link[Istanbul University \tiny \faExternalLink \hspace{4pt}]{http://ce.istanbul.edu.tr/en}}
 \cvitemwithcomment{2001--2003}{Computer Hardware}{{\tiny \textit{3,4/4}},  \link[Uludağ Üniversitesi \tiny \faExternalLink \hspace{4pt}]{http://tby.uludag.edu.tr/}}
 \cvitemwithcomment{1996--2000}{Science}{{\tiny \textit{3.5/5}},  \link[Serik Anatolian High School \tiny \faExternalLink \hspace{4pt}]{http://serikanadolulisesi.meb.k12.tr/}}
 
 
+
 \section{Languages}
+
 \cvitemwithcomment{Turkish}{Native}{}
 \cvitemwithcomment{English}{Intermediate}{Hİgh School and University}
 
-\section{Certifications/Eğitim}
+
+
+\section{Certifications / Trainings}
+
+\cventry{2015}{Applied Entrepreneurship Certificate}{}{}{Gebze Chamber of Commerce}{KOSGEB Applied Entrepreneurship Training.}
 \cventry{2002}{Windows 2000 MCSE}{}{}{MBA Bursa}{Microsoft Certified System Engineer (MCSE) training for Windows 2000 Server Family.}
 \cventry{2002}{Windows 2000 MCP}{}{}{MBA Bursa}{Microsoft Certified Professional (MCP) certificate for Windows 2000 Server Family.}
 
 
-\section{Technical Skills}
-\cvitem{Programming Languages}{C++, PHP, Bash, NSIS Script, Javascript, HTML, QML, Java, C, Object-C}
-\cvitem{Frameworks}{Qt, Qwt, CodeIgniter, JQuery, OpenLayers, GeoServer}
-\cvitem{Development Tools}{QtCreator, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, Matlab}
-\cvitem{Network Protocols}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, XML, MODBUS, RTMP, EPC Gen2, DICOM}
-\cvitem{Database Systems}{MySQL, PostgreSQL, PostGIS, SQLite, RRDTool, MS-SQL}
-\cvitem{Versioning}{git, Bazaar, SVN, Alfresco}
-\cvitem{Operating Systems}{Linux (Ubuntu, Gentoo, Pardus, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 2000 Server), Mac (OS X)}
 
-\section{Personal Informatins}
-  \cvitem{}{Born at 1982. Married and have a child. Got a driver license. Non-smoker. Finished military duty.}
+\section{Technical Skills}
+
+\cvitem{Programming Languages}
+{C/C++, PHP, Javascript, Bash, NSIS Script, HTML, QML, Java}
+\cvitem{Frameworks}
+{Qt, Qwt, MATLAB Mex, Node.js/io.js, CodeIgniter, Laravel, October CMS, JQuery, OpenLayers, GeoServer}
+\cvitem{Development Tools}
+{QtCreator, Atom, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, MATLAB}
+\cvitem{Network Protocols}
+{TCP/IP, JSON, microCOR Protocol, DICOM, Modeo Protocol, SNMP, Google Protocol Buffer, XML, MODBUS, RTMP, EPC Gen2}
+\cvitem{Database Systems}
+{MySQL, PostgreSQL, PostGIS, SQLite, MongoDB, RRDTool, MS-SQL}
+\cvitem{Versioning}
+{git, Bazaar, SVN, Alfresco}
+\cvitem{Operating Systems}
+{Linux (Ubuntu, Gentoo, Pisi, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 10, 2000 Server), Mac (OS X)}
+
+
+
+\section{Personal Informations}
+
+\cvitem{}{Born at 1982. Married and have two children. Got A2 and E driver licenses. Non-smoker. Finished military duty.}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART

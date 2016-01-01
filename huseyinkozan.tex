@@ -6,13 +6,22 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass{moderncv}                           % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% huseyin : fontspec kullanmadan once boyleydi
+% \documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+% huseyin : http://tex.stackexchange.com/questions/31534/change-font-used-by-moderncv
+\usepackage{fontspec}
+\setmainfont{Ubuntu}
+\renewcommand{\sfdefault}{\rmdefault}
 
 
 % character encoding
@@ -28,19 +37,19 @@
 
 % personal data
 \name{Hüseyin}{Kozan}
-\title{Bilgisayar Mühendisi}                               % optional, remove / comment the line if not wanted
-\address{Antalya}{Türkiye}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+90~(536)~339~4791}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\title{Bilgisayar Mühendisi ve Donanım Tenikeri}   % optional, remove / comment the line if not wanted
+\address{Kırşehir}{Türkiye}{}                      % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+90~(536)~339~4791}                 % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{posta@huseyinkozan.com.tr}                               % optional, remove / comment the line if not wanted
-\homepage{huseyinkozan.com.tr}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[twitter]{huseyinkozan}                             % optional, remove / comment the line if not wanted
-\social[github]{huseyinkozan}                              % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Kullanıcı arayüzü yaparak başladığım meslek hayatıma yine aynı alanda uzmanlaşarak devam ettirmek istiyorum. Ayrıca bana beceri ve tecrübe kazandıran açık kaynak hareketine destek ve katkı vermeye devam edeceğim.}                                 % optional, remove / comment the line if not wanted
+\email{posta@huseyinkozan.com.tr}                  % optional, remove / comment the line if not wanted
+\homepage{huseyinkozan.com.tr}                     % optional, remove / comment the line if not wanted
+\social[linkedin]{huseyinkozan}                    % optional, remove / comment the line if not wanted
+\social[twitter]{huseyinkozan}                     % optional, remove / comment the line if not wanted
+\social[github]{huseyinkozan}                      % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                      % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Example quote}                             % optional, remove / comment the line if not wanted
 
 % sayfa numarasi hatasi icin {
 \usepackage{lastpage}
@@ -70,26 +79,49 @@
 % madde linki 
 % \link[madde \tiny \faExternalLink \hspace{4pt}]{http://...}
 
-\section{Deneyimler}
 
-\subsection{Mesleki}
 
-\cventry{Haz. 2014 -- ...}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
+\section{Mesleki Deneyimler}
+
+\cventry{Haz. 2015 -- ...}{Danışman}{\link[Video Analitik \faExternalLink \hspace{4pt}]{http://www.videoanalitik.com/}}{}{}{
 \begin{itemize}
-  \item microCOR Ekg Cihazı Kontrol Yazılımı
+  \item Video Analiz Yazılımı
     \begin{itemize}
-      \item Bilgisayar yazılımının Android'e ve diğer tüm platformlar için yeniden geliştirilmesi.
-    \end{itemize}
-    \begin{itemize}
-      \item DCMTK Android çatalı.
+      \item PHP, Laravel, October CMS, MySQL, HTML, Javascript ve web teknolojileri konularında destek ve geliştirme. Linux İşletim Sistemi ve veri akışı mimari tasarımı konularında destek.
     \end{itemize}
 \end{itemize}}
 
 \cventry{Haz. 2014 -- ...}{Yazılım Mühendisi}{\link[AntSis Elektronik \faExternalLink \hspace{4pt}]{http://antsiselektronik.com.tr/}}{}{}{
 \begin{itemize}
+  \item Nesnelerin İnterneti (IoT)
+    \begin{itemize}
+      \item NodeJS, PHP, HTML, Javascript, MQTT ve benzeri teknolojileri kullanarak IoT yönetim yazılımı geliştirmesi.
+    \end{itemize}
   \item Coğrafi Bilgi Sistemi (GIS)
     \begin{itemize}
-      \item PostGIS, GeoServer, OpenLayers, JQuery, CodeIgniter/PostgreSQL kullanarak GIS sistemi oluşturulması.
+      \item PostGIS, GeoServer, OpenLayers, JQuery, CodeIgniter/PostgreSQL kullanarak Coğrafi Bilgi Sistemi geliştirilmesi.
+    \end{itemize}
+\end{itemize}}
+
+\cventry{Haz. 2014 -- ...}{Yazılım Mühendisi}{\link[Infron Ltd. \faExternalLink \hspace{4pt}]{http://infron.com.tr/}}{}{}{
+\begin{itemize}
+  \item microCOR Lab SDK
+    \begin{itemize}
+      \item Lab Yazılım Geliştirme Kiti (SDK)'nin tasarımı ve geliştirilmesi. MATLAB mex modülü ile veri alımı.
+    \end{itemize}
+  \item microCOR Ekg Yazılımı
+    \begin{itemize}
+      \item DICOM protokolü ve DCMTK araç seti kullanarak hastane otomasyonu entegrasyonu.
+    \end{itemize}
+    \begin{itemize}
+      \item Qt4'den Qt5'e geçirilmesi ve geliştirilmesi.
+    \end{itemize}
+    \begin{itemize}
+      \item Bilgisayar yazılım arayüzünün Android'de ve diğer mobil platformlarda kullanım için geliştirilmesi.
+    \end{itemize}
+  \item Belgelendirme Sistemi
+    \begin{itemize}
+      \item ISO 13485 standardına göre Alfresco, Libreoffice, Redmine ve GitLab araçlarının yapılandırılması ve belgelendirme sistemine uyarlanması.
     \end{itemize}
 \end{itemize}}
 
@@ -154,8 +186,6 @@
     \end{itemize}
 \end{itemize}}
 
-\newpage
-
 \cventry{Tem. -- Ağu. 2012}{Yazılım Mühendisi}{\link[SanLab \faExternalLink \hspace{4pt}]{http://sanlab.net/tr}}{}{}{
 \begin{itemize}
   \item Forklift Simülatörü
@@ -182,7 +212,11 @@
 \end{itemize}}
 
 
-\subsection{Proje Bazlı}
+
+\newpage
+
+
+\section{Proje Bazlı Deneyimler}
 
 \cventry{2012}{RFID Okuyucu SDK'sı}{\link[RFtek Ltd \faExternalLink \hspace{4pt}]{http://rftek.com.tr/}}{}{}{
 \begin{itemize}
@@ -200,25 +234,34 @@
   \item CodeIgniter/PHP ile yapılmış kontrol paneli ile yönetilebilen çocuk yuvası sitesi. (Değiştirilmiştir)
 \end{itemize}}
 
-\subsection{Açık Kaynak}
 
-\cventry{2013}{Qt Creator}{}{}{}{
-\begin{itemize}
-  \item Qt Creator 2.7.0'da eklediğim açık dosyaların orta fare tuşu ile kapatılması katkısı. \link[\tiny \faExternalLink \hspace{4pt}]{https://qt.gitorious.org/qt-creator/qt-creator/source/7724bd467388f6ae3b8a4cbc8609f535a94a03f1:dist/changes-2.7.0}
-\end{itemize}}
 
-\cventry{2013}{Qt}{}{}{}{
+\section{Açık Kaynak Katkılar}
+
+\cventry{2014}{Qt}{}{}{}{
 \begin{itemize}
+\item Sonlu Durum Makinası
+	\begin{itemize}
+      \item \link[Qt-Simple-State \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/Qt-Simple-State} : Basit durum makinası.
+	\end{itemize}
 \item Süleyman Demirel Üniversitesi \link[Qt Sunumu \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/qt-sunumu}
     \begin{itemize}
       \item \link[QML sunum programı \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/qt-presentation}
     \end{itemize}
+\end{itemize}}
+
+\cventry{2013}{Qt}{}{}{}{
+\begin{itemize}
 \item Animasyonlu yerleşim nesneleri
     \begin{itemize}
       \item \link[QAnimatedGridLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedGridLayout} : Animasyon ile elemanını büyütebilen ızgara yerleşimi.
       \item \link[QAnimatedMainWindowLayout \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/QAnimatedMainWindowLayout} : Animasyon ile yerleşim oranları değişebilen ana pencere yerleşimi.
       \item \link[Sabit oranlı yerleşim nesnesi \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/sabit-oranli-layout} : kare şeklindeki yerleşim yapısının \link[Altın Oran\tiny \faExternalLink \hspace{4pt}]{http://tr.wikipedia.org/wiki/Altin_oran}'a uyarlanması.
     \end{itemize}
+\item Qt Creator Özelliği
+	\begin{itemize}
+	  \item Qt Creator 2.7.0'da eklediğim açık dosyaların orta fare tuşu ile kapatılması katkısı. \link[\tiny \faExternalLink \hspace{4pt}]{https://qt.gitorious.org/qt-creator/qt-creator/source/7724bd467388f6ae3b8a4cbc8609f535a94a03f1:dist/changes-2.7.0}
+	\end{itemize}
 \end{itemize}}
 
 \cventry{2012}{PhoneGap}{}{}{}{
@@ -226,9 +269,9 @@
   \item PhoneGap'ın Android ortamı için Bluetooth eklentisi: \link[phonegap-bluetooth \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/phonegap-bluetooth}
 \end{itemize}}
 
-\cventry{2012}{Pardus}{}{}{}{
+\cventry{2012}{Pisi Linux (Pardus)}{}{}{}{
 \begin{itemize}
-  \item Pardus paketleme IDE'si \link[PiSiDo \tiny \faExternalLink \hspace{4pt}]{http://sf.net/p/pisido}
+  \item Pisi Linux (eski ismiyle Pardus) paketleme aracı \link[PiSiDo \tiny \faExternalLink \hspace{4pt}]{https://github.com/huseyinkozan/PiSiDo}
   \item \link[Paketlemeler: \tiny \faExternalLink \hspace{4pt}]{https://github.com/pardus-anka/pardususer.de/}
     \begin{itemize}
       \item PiSiDo, Heimdall, libmodbus, ScanGearMP, Kotaci, Easycap, MP, Sysprof
@@ -249,15 +292,19 @@
   \item \link[Avogadro çevirisi. \tiny \faExternalLink \hspace{4pt}]{https://www.google.com.tr/search?q=avagadro+huseyinkozan}
 \end{itemize}}
 
+
+
 \section{Stajlar}
+
 \cvitemwithcomment{2009}{Infron Ltd.}{microCOR Ekg Bilgisayar Yazılımı geliştirmesi}
 \cvitemwithcomment{2008}{THY}{Bilgisayar Donanım stajı}
 \cvitemwithcomment{2003}{TOFAŞ}{Bilgisayar Donanım stajı}
 \cvitemwithcomment{2003}{Koç Sistem}{Bilgisayar Donanım stajı}
 
-\newpage
+
 
 \section{Okul Projeleri}
+
 \cvitemwithcomment{2009}{Medaq : Qt/C++ ile sinyal kaydı ve sayısal işlem arayüzü.}{\link[Bitirme Projesi \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/bitirme-projesi}}
 \cvitemwithcomment{2009}{Matlab'da sinus sinyali tanima.}{\link[Yapay Sinir Ağları \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/sine_recognition.zip}}
 \cvitemwithcomment{2009}{Matlab ile \link[Hodgkin and Huxley Modeli grafik kullanıcı arayüzü \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/Hudgkin-Huxley.zip}}{}
@@ -267,32 +314,53 @@
 \cvitemwithcomment{2008}{RISC işlemci tasarımı}{Bilgisayar Mimarisi}
 \cvitemwithcomment{2007}{C++'ta dinamik boyutlu dizi}{\link[Programlama Dilleri \tiny \faExternalLink \hspace{4pt}]{http://huseyinkozan.com.tr/files/MyArray.zip}}
 
+
+
 \section{Eğitimler}
+
 \cvitemwithcomment{2004--2009}{Bilgisayar Mühendisliği}{{\tiny \textit{2,8/4}},  \link[İstanbul Üniversitesi \tiny \faExternalLink \hspace{4pt}]{http://ce.istanbul.edu.tr/}}
 \cvitemwithcomment{2001--2003}{Bilgisayar Donanımı}{{\tiny \textit{3,4/4}},  \link[Uludağ Üniversitesi \tiny \faExternalLink \hspace{4pt}]{http://tby.uludag.edu.tr/}}
 \cvitemwithcomment{1996--2000}{Fen Bilimleri}{{\tiny \textit{3.5/5}},  \link[Serik Anadolu Lisesi \tiny \faExternalLink \hspace{4pt}]{http://serikanadolulisesi.meb.k12.tr/}}
 
 
+
 \section{Lisanlar}
+
 \cvitemwithcomment{Türkçe}{Anadil}{}
 \cvitemwithcomment{İngilizce}{Orta}{Lise ve Üniversite Eğitimi}
 
-\section{Sertifika/Eğitim}
+
+
+\section{Sertifikalar / Eğitimler}
+
+\cventry{2015}{Uygulamalı Girişimcilik Sertifikası}{}{}{Gebze Ticaret Odası}{KOSGEB Uygulamalı Girişimcilik Eğitimi.}
 \cventry{2002}{Windows 2000 MCSE}{}{}{MBA Bursa}{Windows 2000 Sunucu ailesi için Microsoft Certified System Engineer (MCSE) eğitimi.}
 \cventry{2002}{Windows 2000 MCP}{}{}{MBA Bursa}{Windows 2000 Sunucu ailesi için Microsoft Certified Professional (MCP) sertifikası.}
 
 
+
 \section{Teknik Beceriler}
-\cvitem{Programlama Dilleri}{C++, PHP, Bash, NSIS Script, Javascript, HTML, QML, Java, C, Object-C}
-\cvitem{Uygulama Çatıları}{Qt, Qwt, CodeIgniter, JQuery, OpenLayers, GeoServer}
-\cvitem{Geliştirme Araçları}{QtCreator, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, Matlab}
-\cvitem{Ağ Protokolleri}{TCP/IP, Modeo Protocol, SNMP, Google Protocol Buffer, JSON, XML, MODBUS, RTMP, EPC Gen2, DICOM}
-\cvitem{Veritabanı Sistemleri}{MySQL, PostgreSQL, PostGIS, SQLite, RRDTool, MS-SQL}
-\cvitem{Sürüm Kontrol}{git, Bazaar, SVN, Alfresco}
-\cvitem{İşletim Sistemleri}{Linux (Ubuntu, Gentoo, Pardus, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 2000 Server), Mac (OS X)}
+
+\cvitem{Programlama Dilleri}
+{C/C++, PHP, Javascript, Bash, NSIS Script, HTML, QML, Java}
+\cvitem{Uygulama Çatıları}
+{Qt, Qwt, MATLAB Mex, Node.js/io.js, CodeIgniter, Laravel, October CMS, JQuery, OpenLayers, GeoServer}
+\cvitem{Geliştirme Araçları}
+{QtCreator, Atom, Netbeans, Notepad++, Inkscape, QMake, Autotools, GCC, MinGW, Eclipse, Dia, Umbrello, Libreoffice, Visual Studio, MATLAB}
+\cvitem{Ağ Protokolleri}
+{TCP/IP, JSON, microCOR Protokolü, DICOM, Modeo Protokolü, SNMP, Google Protocol Buffer, XML, MODBUS, RTMP, EPC Gen2}
+\cvitem{Veritabanı Sistemleri}
+{MySQL, PostgreSQL, PostGIS, SQLite, MongoDB, RRDTool, MS-SQL}
+\cvitem{Sürüm Kontrol}
+{git, Bazaar, SVN, Alfresco}
+\cvitem{İşletim Sistemleri}
+{Linux (Ubuntu, Gentoo, Pisi, Embedded, Android), Windows (98, ME, NT4, XP, Vista, 7, 8, 10, 2000 Server), Mac (OS X)}
+
+
 
 \section{Kişisel Bilgiler}
-  \cvitem{}{1982 doğumlu. Evli ve bir çocuk babası. Sürücü belgesine sahip. Sigara kullanmıyor. Askerlik görevini yerine getirmiştir.}
+
+\cvitem{}{1982 doğumlu. Evli ve iki çocuk babası. A2 ve E sürücü belgelerine sahip. Sigara kullanmıyor. Askerlik görevini yerine getirmiştir.}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
