@@ -7,7 +7,7 @@
 
 Gerekliliklerin kurulumu:
 ```
-sudo apt-get install texlive texlive-latex-extra texlive-luatex texmaker
+sudo apt-get install texlive texlive-latex-extra texlive-luatex texlive-fonts-extra texmaker
 ```
 
 Derleme: Texmaker ile tex dosyaları açılır ve Lualatex ile derlenir.
